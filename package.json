@@ -5,9 +5,9 @@
   "license": "MIT",
   "private": true,
   "contributors": [
-    "Nathanael Scott <scott.nathanael@abc.net.au>"
+    "Nathanael Scott <scott.nathanael@abc.net.au>",
+    "Simon Elvery <elvery.simon@abc.net.au>"
   ],
-  "aunty": "basic-app",
   "scripts": {
     "start": "aunty serve",
     "test": "jest"
