@@ -1,7 +1,3 @@
-# no-odyssey-remove
+## ‼ Moved ‼
 
-A project generated from [aunty](https://github.com/abcnews/aunty)'s `basic-app` template.
-
-## Authors
-
-- Nathanael Scott ([scott.nathanael@abc.net.au](mailto:scott.nathanael@abc.net.au))
+This repository has been retired and the code moved to [GitHub](https://github.com/abcnews/remove-fallback-content).
