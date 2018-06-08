@@ -1,0 +1,28 @@
+{
+  "name": "no-odyssey-remove",
+  "version": "1.0.0",
+  "description": "A project generated from aunty's basic-app template.",
+  "license": "MIT",
+  "private": true,
+  "contributors": [
+    "Nathanael Scott <scott.nathanael@abc.net.au>"
+  ],
+  "aunty": "basic-app",
+  "scripts": {
+    "start": "aunty serve",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/@abcnews/aunty/src/utils/jest"
+    }
+  },
+  "devDependencies": {
+    "@abcnews/aunty": "^7.6.1",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.4.3"
+  },
+  "dependencies": {
+    "odyssey": "git+ssh://git@github.com/abcnews/odyssey.git"
+  }
+}
