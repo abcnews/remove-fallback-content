@@ -1,7 +1,7 @@
 {
   "name": "no-odyssey-remove",
   "version": "1.0.1",
-  "description": "A project generated from aunty's basic-app template.",
+  "description": "A project generated from aunty's basic template.",
   "license": "MIT",
   "private": true,
   "contributors": [
@@ -10,18 +10,10 @@
     "Gourlay Colin <gourlay.colin@abc.net.au>"
   ],
   "scripts": {
-    "start": "aunty serve",
-    "test": "jest"
-  },
-  "jest": {
-    "transform": {
-      ".*": "<rootDir>/node_modules/@abcnews/aunty/src/utils/jest"
-    }
+    "start": "aunty serve"
   },
   "devDependencies": {
-    "@abcnews/aunty": "^8.0.0",
-    "babel-preset-env": "^1.6.1",
-    "jest": "^22.4.3"
+    "@abcnews/aunty": "^9.8.2"
   },
   "dependencies": {
     "odyssey": "git+ssh://git@github.com/abcnews/odyssey.git"
