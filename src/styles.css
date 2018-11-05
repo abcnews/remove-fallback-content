@@ -1,0 +1,11 @@
+@media screen, speech {
+  .root {
+    display: none !important;
+  }
+}
+
+@media print {
+  .root + * {
+    display: none !important;
+  }
+}
