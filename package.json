@@ -9,13 +9,11 @@
     "Simon Elvery <elvery.simon@abc.net.au>",
     "Gourlay Colin <gourlay.colin@abc.net.au>"
   ],
+  "aunty": "basic",
   "scripts": {
     "start": "aunty serve"
   },
   "devDependencies": {
     "@abcnews/aunty": "^9.8.2"
-  },
-  "dependencies": {
-    "odyssey": "git+ssh://git@github.com/abcnews/odyssey.git"
   }
 }

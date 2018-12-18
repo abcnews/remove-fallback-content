@@ -1,12 +1,28 @@
-require('./polyfills');
-const { getSections } = require('../node_modules/odyssey/src/app/utils/anchors');
 const styles = require('./styles.css');
 
-getSections(['remove']).forEach(section => {
+[].slice.call(document.querySelectorAll('a[name="remove"]')).forEach(startNode => {
+  const { parentNode } = startNode;
+  const betweenNodes = [];
   const rootEl = document.createElement('div');
+  let nextNode = startNode;
+  let isMoreContent = true;
+
+  while (isMoreContent && (nextNode = nextNode.nextSibling) !== null) {
+    if (
+      nextNode &&
+      nextNode.nodeType === Node.ELEMENT_NODE &&
+      (nextNode.getAttribute('name') || '').indexOf('endremove') === 0
+    ) {
+      isMoreContent = false;
+    } else {
+      betweenNodes.push(nextNode);
+    }
+  }
 
   rootEl.className = styles.root;
   rootEl.setAttribute('data-component', 'RemoveFallbackContent');
-  section.betweenNodes.forEach(node => rootEl.appendChild(node));
-  section.substituteWith(rootEl, []);
+  betweenNodes.forEach(node => rootEl.appendChild(node));
+  parentNode.insertBefore(rootEl, startNode);
+  parentNode.removeChild(startNode);
+  parentNode.removeChild(nextNode);
 });
